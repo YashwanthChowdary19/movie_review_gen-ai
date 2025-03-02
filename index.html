@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Review Predictor</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Movie Review Predictor</h1>
+    <p>Enter the name of the movie to check if it is worth watching based on reviews!</p>
+    
+    <form action="/predict" method="POST">
+      <label for="movie_name">Movie Name:</label>
+      <input type="text" id="movie_name" name="movie_name" required>
+      <button type="submit">Get Prediction</button>
+    </form>
+  </div>
+</body>
+</html>
