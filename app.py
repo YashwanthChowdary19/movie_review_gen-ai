@@ -136,7 +136,7 @@ def predict():
     review_vec = vectorizer.transform([simulated_review])
     prediction = model.predict(review_vec)[0]
     
-    result = "Worth Watching" if prediction == 1 else "Not Worth Watching"
+    result = "Good vibes. Book the ticket!" if prediction == 1 else "Not Worth Watching"
     
     return render_template('result.html', movie_name=movie_name, prediction=result)
 
